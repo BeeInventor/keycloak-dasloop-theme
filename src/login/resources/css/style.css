@@ -1,0 +1,36 @@
+html, body {
+	margin: 0;
+}
+
+
+section.main {
+	background: linear-gradient(to bottom right, #6fb2af, #042927);
+}
+
+div.ui.main.container {
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.ui.main.segment {
+	width: 100vw;
+	max-width: 600px;
+}
+
+.input.error.text {
+	display: block;
+	text-align: right;
+	margin-top: 0.5rem;
+}
+
+#kc-form-footer {
+	border-top: solid 1px #ededed;
+	margin-top: 1rem;
+	padding-top: 1rem;
+	text-align: center;
+}
