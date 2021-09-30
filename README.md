@@ -1,1 +1,1 @@
-# Keycloak plugin for webhook validation in user registration
+# Keycloak theme for Dasloop Dashboard
