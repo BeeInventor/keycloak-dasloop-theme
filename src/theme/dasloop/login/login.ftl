@@ -36,23 +36,16 @@
                 <div class="${properties.kcFormGroupClass!} ${properties.kcFormSettingClass!}">
                     <div id="kc-form-options">
                         <#if realm.rememberMe && !usernameEditDisabled??>
-                            <div class="checkbox">
-                                <label>
-                                    <#if login.rememberMe??>
-                                        <input tabindex="3" id="rememberMe" name="rememberMe" type="checkbox" checked> ${msg("rememberMe")}
-                                    <#else>
-                                        <input tabindex="3" id="rememberMe" name="rememberMe" type="checkbox"> ${msg("rememberMe")}
-                                    </#if>
-                                </label>
+                            <div class="ui checkbox">
+                                <#if login.rememberMe??>
+                                    <input tabindex="3" id="rememberMe" name="rememberMe" type="checkbox" checked>
+                                <#else>
+                                    <input tabindex="3" id="rememberMe" name="rememberMe" type="checkbox">
+                                </#if>
+                                <label for="rememberMe">${msg("rememberMe")}</label>
                             </div>
                         </#if>
                         </div>
-                        <div class="${properties.kcFormOptionsWrapperClass!}">
-                            <#if realm.resetPasswordAllowed>
-                                <span><a tabindex="5" href="${url.loginResetCredentialsUrl}">${msg("doForgotPassword")}</a></span>
-                            </#if>
-                        </div>
-
                   </div>
 
                   <div id="kc-form-buttons" class="${properties.kcFormGroupClass!}">
@@ -86,13 +79,16 @@
 
     </div>
     <#elseif section = "info" >
-        <#if realm.password && realm.registrationAllowed && !registrationDisabled??>
-            <div id="kc-form-footer">
+        <div id="kc-form-footer">
+            <#if realm.resetPasswordAllowed>
+                <span><a tabindex="5" href="${url.loginResetCredentialsUrl}">${msg("doForgotPassword")}</a></span>
+            </#if>
+            <#if realm.password && realm.registrationAllowed && !registrationDisabled??>
                 <div id="kc-registration">
                     <span>${msg("noAccount")} <a tabindex="6" href="${url.registrationUrl}">${msg("doRegister")}</a></span>
                 </div>
-            </div>
-        </#if>
+            </#if>
+        </div>
     </#if>
 
 </@layout.registrationLayout>
