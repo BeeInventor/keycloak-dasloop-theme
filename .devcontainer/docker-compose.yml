@@ -41,4 +41,4 @@ services:
     volumes:
       - ./keycloak/realm-export.json:/tmp/realm-export.json
       - ./keycloak/scripts:/opt/jboss/startup-scripts
-      - ../src:/opt/jboss/keycloak/themes/dasloop
+      - ../src/theme/dasloop:/opt/jboss/keycloak/themes/dasloop

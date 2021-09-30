@@ -1,0 +1,6 @@
+{
+    "themes": [{
+        "name" : "dasloop",
+        "types": [ "login" ]
+    }]
+}
