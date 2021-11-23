@@ -9,7 +9,7 @@
 	<groupId>com.beeinventor</groupId>
 	<artifactId>keycloak-dasloop-theme</artifactId>
 	<packaging>jar</packaging>
-	<version>1.2.1</version>
+	<version>1.2.2</version>
 	<scm>
 		<url>https://github.com/BeeInventor/keycloak-dasloop-theme</url>
 	</scm>
